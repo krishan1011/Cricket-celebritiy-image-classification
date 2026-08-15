@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cricket Celebrity Classifier</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-light bg-light justify-content-center">
+    <a class="navbar-brand" href="#">
+        Cricket Celebrity Classifier
+    </a>
+</nav>
+
+
+<div class="container">
+
+    <!-- Celebrity Cards -->
+    <div class="row">
+
+        <!-- Gautam Gambhir -->
+        <div class="col-lg-4 col-md-6 col-sm-6 card-wrapper"
+             data-player="Gautam_Gambhir">
+
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100"
+                         src="./images/gautam_gambhir.jpg"
+                         alt="Gautam Gambhir">
+                </div>
+
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">
+                        Gautam Gambhir
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Hardik Pandya -->
+        <div class="col-lg-4 col-md-6 col-sm-6 card-wrapper"
+             data-player="Hardik_Pandya">
+
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100"
+                         src="./images/hardik_pandya.jpg"
+                         alt="Hardik Pandya">
+                </div>
+
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">
+                        Hardik Pandya
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Jaiswal -->
+        <div class="col-lg-4 col-md-6 col-sm-6 card-wrapper"
+             data-player="jaiswal">
+
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100"
+                         src="./images/jaiswal.jpg"
+                         alt="Yashasvi Jaiswal">
+                </div>
+
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">
+                        Yashasvi Jaiswal
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Jasprit Bumrah -->
+        <div class="col-lg-4 col-md-6 col-sm-6 card-wrapper"
+             data-player="Jasprit_Bumrah">
+
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100"
+                         src="./images/jasprit_bumrah.jpg"
+                         alt="Jasprit Bumrah">
+                </div>
+
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">
+                        Jasprit Bumrah
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- MS Dhoni -->
+        <div class="col-lg-4 col-md-6 col-sm-6 card-wrapper"
+             data-player="MS_Dhoni">
+
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100"
+                         src="./images/ms_dhoni.jpg"
+                         alt="MS Dhoni">
+                </div>
+
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">
+                        MS Dhoni
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Rohit Sharma -->
+        <div class="col-lg-4 col-md-6 col-sm-6 card-wrapper"
+             data-player="Rohit_Sharma">
+
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100"
+                         src="./images/rohit_sharma.jpg"
+                         alt="Rohit Sharma">
+                </div>
+
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">
+                        Rohit Sharma
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Sachin Tendulkar -->
+        <div class="col-lg-4 col-md-6 col-sm-6 card-wrapper"
+             data-player="Sachin_Tendulkar">
+
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100"
+                         src="./images/sachin_tendulkar.jpg"
+                         alt="Sachin Tendulkar">
+                </div>
+
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">
+                        Sachin Tendulkar
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Shubman Gill -->
+        <div class="col-lg-4 col-md-6 col-sm-6 card-wrapper"
+             data-player="Shubman_Gill">
+
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100"
+                         src="./images/shubman_gill.jpg"
+                         alt="Shubman Gill">
+                </div>
+
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">
+                        Shubman Gill
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Virat Kohli -->
+        <div class="col-lg-4 col-md-6 col-sm-6 card-wrapper"
+             data-player="Virat_Kohli">
+
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100"
+                         src="./images/virat_kohli.jpg"
+                         alt="Virat Kohli">
+                </div>
+
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">
+                        Virat Kohli
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Upload + Result -->
+    <div class="row mt-4">
+
+        <!-- Upload section -->
+        <div class="col-sm-4">
+
+            <div class="row">
+                <div class="col-12 mx-auto">
+
+                    <form action="/file-upload"
+                          class="dropzone"
+                          id="dropzone">
+
+                        <div class="dz-message needsclick">
+
+                            <img src="./images/upload.png"
+                                 width="50"
+                                 height="50">
+
+                            <br>
+
+                            <span class="note needsclick">
+                                Drop image here or click to upload
+                            </span>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+
+            <div class="row mt-3">
+
+                <div class="col-6 mx-auto">
+                    <button id="submitBtn"
+                            type="button"
+                            class="btn btn-success btn-block">
+
+                        Classify
+
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Error -->
+        <div class="col-sm-4 error" id="error">
+
+            <p>
+                Can't classify image.
+                Classifier was not able to detect a face properly.
+            </p>
+
+        </div>
+
+
+        <!-- Result -->
+        <div class="col-sm-4"
+             id="resultHolder">
+        </div>
+
+
+        <!-- Probability table -->
+        <div class="col-sm-4 mt-4"
+             id="divClassTable">
+
+            <table id="classTable">
+
+                <tr>
+                    <th>Player</th>
+                    <th>Probability Score</th>
+                </tr>
+
+                <tr>
+                    <td>Gautam Gambhir</td>
+                    <td id="score_Gautam_Gambhir"></td>
+                </tr>
+
+                <tr>
+                    <td>Hardik Pandya</td>
+                    <td id="score_Hardik_Pandya"></td>
+                </tr>
+
+                <tr>
+                    <td>Yashasvi Jaiswal</td>
+                    <td id="score_jaiswal"></td>
+                </tr>
+
+                <tr>
+                    <td>Jasprit Bumrah</td>
+                    <td id="score_Jasprit_Bumrah"></td>
+                </tr>
+
+                <tr>
+                    <td>MS Dhoni</td>
+                    <td id="score_MS_Dhoni"></td>
+                </tr>
+
+                <tr>
+                    <td>Rohit Sharma</td>
+                    <td id="score_Rohit_Sharma"></td>
+                </tr>
+
+                <tr>
+                    <td>Sachin Tendulkar</td>
+                    <td id="score_Sachin_Tendulkar"></td>
+                </tr>
+
+                <tr>
+                    <td>Shubman Gill</td>
+                    <td id="score_Shubman_Gill"></td>
+                </tr>
+
+                <tr>
+                    <td>Virat Kohli</td>
+                    <td id="score_Virat_Kohli"></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="./dropzone.min.js"></script>
+
+<script src="./app.js"></script>
+
+</body>
+
+</html>
