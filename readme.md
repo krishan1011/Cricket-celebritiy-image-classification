@@ -1,16 +1,20 @@
 # Cricket Celebrity Image Classification
 
-A full-stack computer vision project that identifies Indian cricket celebrities from uploaded face images using OpenCV, wavelet-based feature extraction, and a trained machine learning model.
+A full-stack computer vision project that classifies Indian cricket celebrities from uploaded face images using OpenCV, wavelet-based feature extraction, and a tuned support vector machine.
 
-This project combines image preprocessing, face detection, feature engineering, and a deployed Flask API into a working end-to-end classifier that predicts the player from a face image.
+This project is more than a notebook experiment: it combines a trained image classifier, a Flask API, and a browser-based UI into a working end-to-end prediction workflow.
 
-## Why this project
+## Project summary
 
-- Built a complete ML + CV workflow from image upload to prediction output
-- Trained on 242 samples across 9 cricket players
-- Used a handcrafted 4096-dimensional feature vector combining raw RGB and wavelet features
-- Evaluated multiple classifiers with GridSearchCV before selecting the final SVM model
-- Delivered a web interface and API so the model can be used outside the notebook
+Built a 9-class face recognition system for cricket celebrities and achieved measurable performance from the notebook evaluation:
+
+- Best cross-validation score: 0.635435 (63.54%)
+- Hold-out test accuracy: 0.491803 (49.18%)
+- Dataset: 242 samples across 9 players
+- Model: SVM selected after GridSearchCV tuning
+- Feature representation: 4096-dimensional vector combining raw RGB and wavelet features
+
+This is a strong small-dataset prototype that demonstrates end-to-end ML product development in computer vision, from preprocessing and model selection to deployment in a web app.
 
 ## Supported players
 
@@ -35,35 +39,31 @@ This project combines image preprocessing, face detection, feature engineering, 
 | Classes | 9 |
 | Model selection method | GridSearchCV with 5-fold CV |
 | Best model | SVM |
-| Best CV score | 0.635435 |
+| Best CV score | 0.635435 (63.54%) |
 | Final test accuracy | 0.491803 (49.18%) |
-
-The notebook recorded a best cross-validation score of 63.54% and a hold-out accuracy of 49.18% on the test split. This is a strong small-dataset prototype and a solid example of end-to-end ML product development in computer vision.
-
----
 
 ## Pipeline
 
 Image upload → face detection → eye validation → face crop → feature extraction → SVM classification → probability output
 
 ### 1. Face detection
-The app uses Haar cascades for frontal face and eye detection.
+The app uses Haar cascades for frontal face and eye detection to isolate the subject before classification.
 
 ### 2. Feature extraction
-The image is converted into a combined representation:
+The image is transformed into a combined feature representation:
 
 - Raw RGB features: 32 × 32 × 3 = 3072 features
 - Wavelet features: 32 × 32 = 1024 features
 - Combined feature vector: 4096 features
 
-### 3. Model evaluation
-The project compares multiple algorithms using GridSearchCV:
+### 3. Model selection and evaluation
+The project compares multiple models using GridSearchCV and selects the best-performing classifier:
 
 - SVM
 - Random Forest
 - Logistic Regression
 
-The SVM performed best and was selected for prediction.
+The SVM produced the strongest validation performance and was used for final prediction.
 
 ---
 
@@ -112,7 +112,7 @@ Cricket-celebritiy-image-classification/
 │   ├── dropzone.min.css
 │   └── dropzone.min.js
 ├── .gitignore
-├── README.md
+├── readme.md
 └── requirements.txt
 ```
 
@@ -193,17 +193,17 @@ Then open the frontend in the `UI` folder in a browser to upload an image and ge
 
 ## Limitations
 
-- Small dataset compared to modern deep-learning image models
-- Prediction quality depends on lighting, pose, face alignment, and background
+- Small dataset compared with modern deep-learning image models
+- Accuracy depends on lighting, pose, face alignment, and background clutter
 - Only 9 cricket players are supported
 - Face detection can struggle with occlusion or low-quality images
 
 ## Future improvements
 
-- Expand dataset diversity and sample size
-- Add data augmentation
+- Expand the dataset with more players and varied poses
+- Add data augmentation and image balancing
 - Test CNN and transfer-learning models
-- Improve face detection robustness
+- Improve face detection robustness and preprocessing
 - Add confidence thresholds and uncertainty handling
 - Support multiple faces in a single image
 - Deploy the API to a cloud platform
@@ -214,10 +214,10 @@ Then open the frontend in the `UI` folder in a browser to upload an image and ge
 
 This project demonstrates practical experience with:
 
-- Computer vision
-- Face detection and preprocessing
-- Feature engineering
-- Wavelet transforms
+- Computer vision and facial preprocessing
+- Feature engineering using raw RGB and wavelet descriptors
+- Model selection and evaluation with scikit-learn
+- End-to-end ML deployment with Flask and a web frontend
 - Supervised learning
 - SVM model selection and evaluation
 - Full-stack ML deployment with Flask and frontend integration
